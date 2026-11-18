@@ -205,12 +205,22 @@ thead th{white-space:normal}
 figure{max-width:300px}
 .calc-out output{color:#f3c531}
 s{opacity:.7}
+
+.sitenav{display:flex;gap:4px;overflow-x:auto;white-space:nowrap;padding:7px 16px;background:#07130e;scrollbar-width:none;justify-content:center}
+.sitenav::-webkit-scrollbar{display:none}
+.sitenav a{color:#a3b5aa;font:600 13px/1 Mulish,system-ui,sans-serif;padding:7px 12px;border-radius:999px;text-decoration:none}
+.sitenav a:hover{color:#f1ece0;background:#12291f}
+.sitenav a[aria-current="page"]{background:#f3c531;color:#07130e}
+@media (max-width:620px){.sitenav{justify-content:flex-start}}
 </style>
 </head>
 <body>
 <header class="top" id="topbar">
+  <nav class="sitenav" aria-label="dicecontrolpro.com">
+    <a href="./">← Home</a><a href="features.html">Features</a><a href="faq.html">FAQ</a><a href="manual.html" aria-current="page">Manual</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a>
+  </nav>
   <div class="top-in">
-    <a class="brand" href="#top"><b>Dice Control Pro</b><span>User Manual · v1.0</span></a>
+    <a class="brand" href="./"><b>Dice Control Pro</b><span>User Manual · v1.0</span></a>
     <div class="search" role="search">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
       <input id="q" type="search" placeholder="Search the manual" aria-label="Search the manual" autocomplete="off" aria-controls="results">
